@@ -13,9 +13,19 @@ namespace MvcApplication1.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.title = "LOL";
+            ViewBag.Desc = "腾讯代运营 英雄联盟";
             return View();
         }
 
+        public string Fun(string name)
+        {
+            return "hello" + name;
+        }
+        public string FunInt(int id)
+        {
+            return "hello" + id;
+        }
         public string GetIndex()
         {
             return "执行了 GameController GetIndex()";
