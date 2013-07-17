@@ -16,6 +16,9 @@ namespace MvcApplication1.Models
         }
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
+    public class T
+    {
+    }
 
     [Table("UserProfile")]
     public class UserProfile
