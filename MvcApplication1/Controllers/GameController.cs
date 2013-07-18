@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcApplication1.Models;
 
 namespace MvcApplication1.Controllers
 {
@@ -24,6 +25,9 @@ namespace MvcApplication1.Controllers
         }
         public string FunInt(int id)
         {
+            AppStart apps = new AppStart();
+            apps.Exec();
+            
             return "hello" + id;
         }
         public string GetIndex()
