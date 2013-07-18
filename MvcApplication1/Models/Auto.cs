@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MvcApplication1.Models
 {
-    [AttributeUsage(AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Class)]
     public class Auto:Attribute
     {
         public string Id { get; set; }
