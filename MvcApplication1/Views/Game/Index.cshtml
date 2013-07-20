@@ -4,7 +4,7 @@
 }
 
 <h2>注册游戏</h2>
-
+@Html.ActionLink("新建", "Create")
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()

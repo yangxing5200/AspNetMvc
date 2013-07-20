@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 namespace MvcApplication1.Models
 {
+    public class GameDbContext : DbContext
+    {
+        public DbSet<GameModels> Games { get; set; }
+    }
     public class GameModels
     {
         [Required]
