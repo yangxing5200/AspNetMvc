@@ -172,6 +172,7 @@
     <Compile Include="Models\AppStart.cs" />
     <Compile Include="Models\Auto.cs" />
     <Compile Include="Models\AutoClass.cs" />
+    <Compile Include="Models\GameModels.cs" />
     <Compile Include="Models\MyAttribute.cs" />
     <Compile Include="Models\MyCode.cs" />
     <Compile Include="Models\Test.cs" />
@@ -290,6 +291,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Account\RegisterGame.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
