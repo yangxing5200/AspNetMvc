@@ -9,33 +9,33 @@ using MvcApplication1.Models;
 
 namespace MvcApplication1.Controllers
 {
-    public class MoviesController : Controller
+    public class YxUserController : Controller
     {
-        private DbContextMovie db = new DbContextMovie();
-        
+        private YxUsersContext db = new YxUsersContext();
+
         //
-        // GET: /Movies/
+        // GET: /YxUser/
 
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View(db.YxUserProfile.ToList());
         }
 
         //
-        // GET: /Movies/Details/5
+        // GET: /YxUser/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            YxUserProfile yxuserprofile = db.YxUserProfile.Find(id);
+            if (yxuserprofile == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(yxuserprofile);
         }
 
         //
-        // GET: /Movies/Create
+        // GET: /YxUser/Create
 
         public ActionResult Create()
         {
@@ -43,70 +43,70 @@ namespace MvcApplication1.Controllers
         }
 
         //
-        // POST: /Movies/Create
+        // POST: /YxUser/Create
 
         [HttpPost]
-        public ActionResult Create(Movie movie)
+        public ActionResult Create(YxUserProfile yxuserprofile)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
+                db.YxUserProfile.Add(yxuserprofile);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(movie);
+            return View(yxuserprofile);
         }
 
         //
-        // GET: /Movies/Edit/5
+        // GET: /YxUser/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            YxUserProfile yxuserprofile = db.YxUserProfile.Find(id);
+            if (yxuserprofile == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(yxuserprofile);
         }
 
         //
-        // POST: /Movies/Edit/5
+        // POST: /YxUser/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Movie movie)
+        public ActionResult Edit(YxUserProfile yxuserprofile)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
+                db.Entry(yxuserprofile).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(movie);
+            return View(yxuserprofile);
         }
 
         //
-        // GET: /Movies/Delete/5
+        // GET: /YxUser/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
+            YxUserProfile yxuserprofile = db.YxUserProfile.Find(id);
+            if (yxuserprofile == null)
             {
                 return HttpNotFound();
             }
-            return View(movie);
+            return View(yxuserprofile);
         }
 
         //
-        // POST: /Movies/Delete/5
+        // POST: /YxUser/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Movie movie = db.Movies.Find(id);
-            db.Movies.Remove(movie);
+            YxUserProfile yxuserprofile = db.YxUserProfile.Find(id);
+            db.YxUserProfile.Remove(yxuserprofile);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

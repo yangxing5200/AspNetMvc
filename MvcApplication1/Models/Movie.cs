@@ -7,8 +7,12 @@ using System.Web;
 
 namespace MvcApplication1.Models
 {
-    public class DbContextMovie:DbContext
+    public class DbContextMovie : DbContext
     {
+        public DbContextMovie()
+            : base("DefaultConnection")
+        {
+        }
         public DbSet<Movie> Movies { get; set; }
     }
     public class Movie
@@ -18,7 +22,7 @@ namespace MvcApplication1.Models
         [Display(Name = "影片编号")]
         public int Id { get; set; }
 
-    
+
 
         [Required]
         [StringLength(30)]

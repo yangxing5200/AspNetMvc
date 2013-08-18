@@ -12,6 +12,8 @@ namespace MvcApplication1.Controllers
         {
             ViewBag.Message = "修改此模板以快速启动你的 ASP.NET MVC 应用程序。";
 
+            int x = 9;
+          //  x + 1/2 = 5;
             return View();
         }
 
